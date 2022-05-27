@@ -43,6 +43,7 @@ async function getStudentStateList(): Promise<Array<StudentState>> {
       const stateList = await getStudentStateList();
       const notStudyText = stateList.filter(state => state.isStudy !== '是')
         .reduce((text, state) => `${text}${text === '' ? '' : '、'}${state.realname}`, '');
+
       if (notStudyText !== '') {
         groups.forEach(group =>
           bot.sendMessage({
@@ -50,6 +51,9 @@ async function getStudentStateList(): Promise<Array<StudentState>> {
             message: new Message().addText(`未完成大学习: ${notStudyText}`),
           })
         )
+        console.log(`未完成大学习: ${notStudyText}`);
+      } else {
+        console.log('没有发现未完成大学习的同学');
       }
     }
   ).start();
