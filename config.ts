@@ -9,5 +9,5 @@ export default {
     "qq": 3070539027,
     "baseUrl": ""
   },
-  "cronString": "10 * * *"
+  "cronString": '0 0 10 * * *'
 }

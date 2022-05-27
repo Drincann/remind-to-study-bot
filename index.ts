@@ -37,7 +37,7 @@ async function getStudentStateList(): Promise<Array<StudentState>> {
   const bot = new Bot;
   await bot.open(botConfig)
   new cron.CronJob(
-    cronString ?? '10 * * *',
+    cronString ?? '0 0 10 * * *',
     async () => {
       console.log(`task running ${new Date().toLocaleString()}`);
       const stateList = await getStudentStateList();
