@@ -2,7 +2,7 @@ import axios from 'axios';
 import cron from 'cron';
 import { Bot, Message } from 'mirai-js'
 import config from './config';
-const { cookie, token, botConfig, groups } = config;
+const { cookie, token, botConfig, groups, cronString } = config;
 
 interface StudentState {
   realname?: string,
@@ -37,7 +37,7 @@ async function getStudentStateList(): Promise<Array<StudentState>> {
   const bot = new Bot;
   await bot.open(botConfig)
   new cron.CronJob(
-    '10 * * *',
+    cronString ?? '10 * * *',
     async () => {
       console.log(`task running ${new Date().toLocaleString()}`);
       const stateList = await getStudentStateList();

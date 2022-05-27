@@ -8,5 +8,6 @@ export default {
     "verifyKey": "",
     "qq": 3070539027,
     "baseUrl": ""
-  }
+  },
+  "cronString": "10 * * *"
 }
