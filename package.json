@@ -14,5 +14,9 @@
     "axios": "^0.27.2",
     "cron": "^2.0.0",
     "mirai-js": "^2.6.1"
+  },
+  "devDependencies": {
+    "ts-node": "^10.8.0",
+    "typescript": "^4.7.2"
   }
 }

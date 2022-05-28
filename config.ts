@@ -1,6 +1,13 @@
 export default {
-  "cookie": "",
-  "token": "",
+  "username": "",
+  "password": "",
+  "recognizeConfig": {
+    "username": "",
+    "password": "",
+    "softid": "",
+    "codetype": "",
+    "len_min": 4,
+  },
   "groups": [
     829153782
   ],
